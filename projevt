@@ -1,0 +1,25 @@
+<div>
+    @foreach (var item in Model)
+    {
+        <div>
+            @item.DepartmentName
+        </div>
+        <div>
+            <table>
+                <tbody>
+                    @foreach (var emp in item.EmployeeList)
+                    {
+                        <tr>
+                            <td>
+                                @emp.EmployeeID
+                            </td>
+                            <td>
+                                @emp.EmployeeName
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+</div>
